@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.UUID;
 
 @WebServlet(urlPatterns = "/pacientes/*")
 public class PacienteController extends HttpServlet {
@@ -77,10 +78,10 @@ public class PacienteController extends HttpServlet {
 
         if (method.equals("atualizar")) {
             String id = request.getParameter("id");
-            return new Paciente(senha,email,nome,cpf,telefone,sexo,dataNascimento);
+            return new Paciente(id,senha,email,nome,cpf,telefone,sexo,dataNascimento);
         }
         else {
-            return new Paciente(senha,email,nome,cpf,telefone,sexo,dataNascimento);
+            return new Paciente(UUID.randomUUID().toString().substring(0, 10),senha,email,nome,cpf,telefone,sexo,dataNascimento);
         }
 
 

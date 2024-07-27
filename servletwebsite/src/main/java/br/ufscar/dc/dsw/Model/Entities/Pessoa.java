@@ -1,5 +1,6 @@
 package br.ufscar.dc.dsw.Model.Entities;
 
+import java.util.Objects;
 import java.util.UUID;
 
 abstract public class Pessoa {
@@ -9,11 +10,11 @@ abstract public class Pessoa {
     private String email;
     private String senha;
 
-    public Pessoa(String senha, String email, String nome) {
+    public Pessoa( String id, String senha, String email, String nome) {
         this.senha = senha;
         this.email = email;
         this.nome = nome;
-        this.id = (UUID.randomUUID().toString().substring(0, 10));
+        this.id = id;
     }
 
     public Pessoa(String id) {
@@ -24,9 +25,12 @@ abstract public class Pessoa {
         return id;
     }
 
-    public void setId(UUID id) {
-        this.id = String.valueOf(id);
-    }
+//    public void GenerateID( ) {
+//        if(Objects.equals(this.id, "")){
+//            this.id = (UUID.randomUUID().toString().substring(0, 10));
+//        }
+//
+//    }
 
     public String getNome() {
         return nome;

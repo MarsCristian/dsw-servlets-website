@@ -1,6 +1,7 @@
 package br.ufscar.dc.dsw.Model.DAO;
 
 import br.ufscar.dc.dsw.Model.Entities.Medico;
+import br.ufscar.dc.dsw.Model.Entities.Paciente;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -51,7 +52,7 @@ public class MedicoDAO extends GenericDAO{
     }
 
     public void Update(Medico medico) {
-        String sql = "UPDATE medico SET email=?,senha=?,crm=?,nome=?,especialidade=?, WHERE medico_id=?";
+        String sql = "update medico set email=?,senha=?,crm=?,nome=?,especialidade=? where medico_id=?";
 
         try {
             Connection conn = this.getConnection();
@@ -65,7 +66,7 @@ public class MedicoDAO extends GenericDAO{
             ps.setString(6,medico.getId());
             ps.executeUpdate();
 
-            //ps.close();
+            ps.close();
             conn.close();
 
         } catch (SQLException e){
@@ -90,7 +91,7 @@ public class MedicoDAO extends GenericDAO{
                 String nome = rs.getString("nome");
                 String especialidade = rs.getString("especialidade");
 
-                Medico medico = new Medico(medico_id,email,crm,nome,especialidade);
+                Medico medico = new Medico(medico_id,senha,email,crm,nome,especialidade);
                 listaMedicos.add(medico);
             }
             rs.close();
@@ -101,6 +102,37 @@ public class MedicoDAO extends GenericDAO{
             throw new RuntimeException(e);
         }
         return listaMedicos;
+    }
+
+    public Medico GetById(String id) {
+        Medico medico = null;
+
+        String sql = "SELECT * from medico where medico_id = ?";
+
+        try {
+            Connection conn = this.getConnection();
+            PreparedStatement statement = conn.prepareStatement(sql);
+
+            statement.setString(1, id);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                String email = rs.getString("email");
+                String senha = rs.getString("senha");
+                String crm = rs.getString("crm");
+                String nome = rs.getString("nome");
+                String especialidade = rs.getString("especialidade");
+
+
+                medico = new Medico(id,senha,email,crm,nome,especialidade);
+            }
+
+            rs.close();
+            statement.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return medico;
     }
 
 }

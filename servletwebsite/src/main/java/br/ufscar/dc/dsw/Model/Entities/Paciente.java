@@ -9,8 +9,8 @@ public class Paciente extends Pessoa {
     private String sexo;
     private String dataNascimento;
 
-    public Paciente(String senha, String email, String nome, String cpf, String telefone, String sexo, String dataNascimento) {
-        super(senha, email, nome);
+    public Paciente(String id, String senha, String email, String nome, String cpf, String telefone, String sexo, String dataNascimento) {
+        super(id, senha, email, nome);
         this.cpf = cpf;
         this.telefone = telefone;
         this.sexo = sexo;

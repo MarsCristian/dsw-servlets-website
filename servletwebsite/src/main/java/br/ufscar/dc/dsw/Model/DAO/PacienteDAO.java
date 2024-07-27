@@ -12,7 +12,7 @@ public class PacienteDAO extends GenericDAO {
         String sql = "insert into paciente (paciente_id,email,senha,cpf,nome,telefone,sexo,dataNascimento) values(?,?,?,?,?,?,?,?)";
 
         try {
-            Connection con = getConnection();
+            Connection con = this.getConnection();
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps = con.prepareStatement(sql);
@@ -52,7 +52,7 @@ public class PacienteDAO extends GenericDAO {
     }
 
     public void Update(Paciente paciente) {
-        String sql = "update paciente set email=?,senha=?,cpf=?,telefone=?,sexo=?,dataNascimento=? where paciente_id=?";
+        String sql = "update paciente set email=?,senha=?,cpf=?,nome=?,telefone=?,sexo=?,dataNascimento=? where paciente_id=?";
 
         try{
             Connection con = this.getConnection();
@@ -61,10 +61,11 @@ public class PacienteDAO extends GenericDAO {
             ps.setString(1, paciente.getEmail());
             ps.setString(2, paciente.getSenha());
             ps.setString(3, paciente.getCpf());
-            ps.setString(4, paciente.getTelefone());
-            ps.setString(5, paciente.getSexo());
-            ps.setString(6, paciente.getDataNascimento());
-            ps.setString(7, paciente.getId());
+            ps.setString(4, paciente.getNome());
+            ps.setString(5, paciente.getTelefone());
+            ps.setString(6, paciente.getSexo());
+            ps.setString(7, paciente.getDataNascimento());
+            ps.setString(8, paciente.getId());
             ps.executeUpdate();
 
             //ps.close();
@@ -94,7 +95,7 @@ public class PacienteDAO extends GenericDAO {
                 String sexo = rs.getString("sexo");
                 String dataNascimento = rs.getString("dataNascimento");
 
-                Paciente paciente = new Paciente(senha,email,cpf,nome,telefone,sexo,dataNascimento);
+                Paciente paciente = new Paciente(paciente_id,senha,email,cpf,nome,telefone,sexo,dataNascimento);
                 listaPacientes.add(paciente);
             }
             rs.close();
@@ -127,7 +128,7 @@ public class PacienteDAO extends GenericDAO {
                 String sexo = rs.getString("sexo");
                 String dataNascimento = rs.getString("dataNascimento");
 
-                paciente = new Paciente(senha,email,cpf,nome,telefone,sexo,dataNascimento);
+                paciente = new Paciente(id,senha,email,cpf,nome,telefone,sexo,dataNascimento);
             }
 
             rs.close();

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.UUID;
 
 @WebServlet(urlPatterns = "/medicos/*")
 public class MedicoController extends HttpServlet {
@@ -74,10 +75,10 @@ public class MedicoController extends HttpServlet {
         String especialidade = request.getParameter("especialidade");
         if (method.equals("atualizar")) {
             String id = request.getParameter("id");
-            return new Medico(senha,email,nome,crm,especialidade);//todo see here
+            return new Medico(id,senha,email,crm,nome,especialidade);//todo see here
         }
         else {
-            return new Medico(senha,email,nome,crm,especialidade);
+            return new Medico(UUID.randomUUID().toString().substring(0, 10),senha,email,crm,nome,especialidade);
         }
 
 
@@ -90,7 +91,12 @@ public class MedicoController extends HttpServlet {
     }
 
     private void ApresentarFormEdicao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        Medico medico = medicoDAO.GetById(id);
+        request.setAttribute("medico", medico);
 
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/medico/formulario.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void Listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

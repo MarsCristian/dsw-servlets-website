@@ -5,40 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f259e1e-af4b-4591-be6d-f1b5d91f24c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplication.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/AloMundoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/MedicoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/PacienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/InterpretarRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/MedicoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/PacienteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Medico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/RedirectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/medico/campos.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/medico/formulario.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/medico/listar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paciente/campos.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paciente/formulario.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paciente/listar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pagina.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requisitos.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/MedicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/MedicoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Controller/PacienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/MedicoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/MedicoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/PacienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/DAO/PacienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Medico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufscar/dc/dsw/Model/Entities/Pessoa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +40,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -165,7 +143,7 @@
       <workItem from="1719316622104" duration="3613000" />
       <workItem from="1719573764376" duration="8229000" />
       <workItem from="1720783723089" duration="13721000" />
-      <workItem from="1722105388452" duration="7596000" />
+      <workItem from="1722105388452" duration="11486000" />
     </task>
     <servers />
   </component>
